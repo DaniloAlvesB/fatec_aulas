@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">  <!-- os caraacteres e chars -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação em microinformática</title>
+</head>
+<body>
+<!-- <p>Olá Mundo!</p> -->
+<h1>Exemplo 1</h1>
+
+<script>
+let nome = prompt('Seu nome:')  // var não é mais usado, usa-se "let"
+let nomeSocial = prompt('Seu nome social(caso não tenha deixe em branco):')
+let idade = prompt('Sua idade:')
+let email = prompt('Seu email:')
+
+//Exemplo 2
+// let n1 = parseFloat(prompt('Número 1:'))
+// let n2 = parseFloat(prompt('Número 2:'))
+
+// let r = n1 + n2
+
+//ou
+// let n1 = prompt('Número 1:')
+// let n2 = prompt('Número 2:')
+
+// let r = parseFloat(n1) + parseFloat(n2)
+
+//document.write(`A soma de ${n1} e ${n2} é ${r}.`)
+
+
+// alert('Seu nome é: ' + nome) // Funções que renderizam primeiro que tudo
+
+//document.write("Olá " + nome + "! Boas vindas.") //Concatenação básica(clássica) de strings
+
+//Variação Tamplate Script (ocorre acento grave)
+if (nomeSocial == 0) {
+    document.write(`Olá ${nome} ! Boas vindas. <br> Você não tem nome social.<br> Você tem ${idade} anos.<br> Seu e-mail para contato é ${email}`)  
+} else {
+    document.write(`Olá ${nome} ! Boas vindas. <br> Seu nome social é ${nomeSocial}.<br> Você tem ${idade} anos.<br> Seu e-mail para contato é ${email}`)
+}
+
+</script>
+</body>
+</html>
+

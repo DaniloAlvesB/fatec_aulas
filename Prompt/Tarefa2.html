@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">  <!-- os caraacteres e chars -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação em microinformática</title>
+</head>
+<body>
+
+<h1>Tarefa dia 22/05</h1>
+<h2>2)Cálculo de desconto</h2>
+
+<script>
+
+let preco = prompt("Valor do produto: ")
+let desc = prompt("Valor do desconto: ")
+
+let valDesc = parseFloat(preco) - ((parseFloat(preco) * parseFloat(desc))/100)
+
+document.write(`O valor do produto com desconto é de R$ ${valDesc}`)
+
+</script>
+
+</body>
+</html>

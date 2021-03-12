@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">  <!-- os caraacteres e chars -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação em microinformática</title>
+</head>
+<body>
+
+<h1>Tarefa dia 22/05</h1>
+<h2>1)Operações normais</h2>
+
+<script>
+
+let n1 = prompt('Número 1:')
+let n2 = prompt('Número 2:')
+
+let soma = parseFloat(n1) + parseFloat(n2)
+let subtracao = parseFloat(n1) - parseFloat(n2)
+let multiplicacao = parseFloat(n1) * parseFloat(n2)
+let divisao = parseFloat(n1) / parseFloat(n2)
+
+//Calcular resto de divisão(COMPLEMENTO)
+let rest = parseFloat(n1) % parseFloat(n2)
+
+document.write(`
+        ${n1} + ${n2} = ${soma}. <br>
+        ${n1} - ${n2} = ${subtracao} <br>
+        ${n1} * ${n2} = ${multiplicacao} <br>
+        ${n1} / ${n2} = ${divisao} <br>
+        ${n1} %(resto) ${n2} = ${rest} <br>
+            `)
+
+</script>
+
+</body>
+</html>

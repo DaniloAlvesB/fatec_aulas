@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">  <!-- os caraacteres e chars -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação em microinformática</title>
+</head>
+<body>
+
+<h1>Aula 04.03.2021- Exercício 4</h1>
+
+<form id = "form">
+    <input id="Field1" type="number" placeholder="Preço base do produto">
+    <input id="Field2" type="number" placeholder="Percentual de desconto">
+<button>Calcular</button>
+
+</form>
+
+<div id ="result"></div>
+
+<script>
+//Parando de usar prompt()
+function onCalculo(){
+    event.preventDefault()
+
+    let price = parseFloat(Field1.value)
+    let descount = parseFloat(Field2.value)
+
+if(!isNaN(price) && !isNaN(descount) ){
+    let amountDiscounted = price - price * descount / 100
+    result.innerHTML = `O valor do produto com desconto é de R$ ${amountDiscounted}`
+}else{result.innerHTML = `Insira um valor válido.`}
+}
+form.addEventListener('submit', onCalculo)//checar o que acontece
+</script>
+
+</body>
+</html>

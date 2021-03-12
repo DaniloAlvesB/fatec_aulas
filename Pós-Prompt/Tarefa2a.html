@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">  <!-- os caraacteres e chars -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação em microinformática</title>
+</head>
+<body>
+    <h1>Tarefa-Exercício 5</h1>
+    <p>Calculos.</p>
+    
+    <form id="form">
+        <input id="field1" type="number" placeholder="Primeiro número">
+        <input id="field2" type="number" placeholder="Segundo número">
+        <button>Calcular</button>
+    </form>
+    
+    <div id="result"></div>
+    
+    <script>
+    function onSubmit(event) {
+    event.preventDefault()
+    
+    let n1 = parseFloat(field1.value)
+    let n2 = parseFloat(field2.value)
+    
+if (isNaN(n1)) {
+    if (isNaN(n2)) {
+    result.innerHTML = '<p>Por favor, informe um valor válido.</p>'
+    return
+}}
+    
+    let sum = n1 + n2
+    let subtraction = n1 - n2
+    let multiplication = n1 * n2
+    let division = n1 / n2
+    
+result.innerHTML = `
+${n1} + ${n2} = ${sum} <br>
+${n1} - ${n2} = ${subtraction}<br>
+${n1} x ${n2} = ${multiplication}<br>
+${n1} : ${n2} = ${division}<br>
+
+`
+}
+
+    form.addEventListener('submit', onSubmit)
+</script>
+</body>
+</html>
