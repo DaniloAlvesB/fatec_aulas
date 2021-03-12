@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Programação em Microinformática - Exemplo 04</title>
+</head>
+<body>
+<h1>Tarefa-Exercício 6</h1>
+<h3>Bhaskara</h3>
+
+<form id="form">
+    <input id="field1" type="number" placeholder="Valor de 'a'">
+    <input id="field2" type="number" placeholder="Valor de 'b'">
+    <input id="field3" type="number" placeholder="Valor de 'c'">
+    <button>Calcular</button>
+</form>
+
+<div id="result"></div>
+
+<script>
+    function onSubmit(event) {
+    event.preventDefault()
+
+    let a = parseFloat(field1.value)
+    let b = parseFloat(field2.value)
+    let c = parseFloat(field3.value)
+
+    if (isNaN(a) || isNaN(b) || isNaN(c)){
+        result.innerHTML = '<p>Por favor, informe um valor válido.</p>'
+        return
+    }
+    if(a === 0){
+        result.innerHTML = '<p>Por favor, informe um valor válido de "a" (diferente de zero).</p>'
+        return
+    }
+
+    let delta = (b*b) - (4*a*c)
+
+    if(delta >= 0){
+        let bhaskaraA = ((-b) + Math.sqrt(delta))/(2*a)
+        let bhaskaraB = ((-b) - Math.sqrt(delta))/(2*a)
+
+        result.innerHTML = `
+        <br> Delta = <b> ${delta} </b> <br>
+        X' = <b> ${bhaskaraA} </b> <br>
+        X'' = <b> ${bhaskaraB}</b>
+    `
+    }else{
+        result.innerHTML = `Delta negativo(${delta}), não possui raízes.`
+        return
+    }
+
+//IsFinite()
+
+}
+
+form.addEventListener('submit', onSubmit)
+</script>
+</body>
+</html>
