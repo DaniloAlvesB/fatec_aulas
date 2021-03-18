@@ -26,13 +26,13 @@
 <div id="result"></div>
 
 <script>
-    var select = document.querySelector('select');
-    var para = document.querySelector('p');
+    let select = document.querySelector('select');
+    let para = document.querySelector('p');
 
 function choice(event){
     event.preventDefault()
 
-    var choice = select.value;
+    let choice = select.value;
 
     if (choice === 'sunny') {
         result.innerHTML = '<br><b>Está um belo e ensolarado dia lá fora. Que tal ir ao parque? Ou à praia?.';
