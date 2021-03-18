@@ -24,7 +24,8 @@
 	}
 	.female{
 		color: pink
-    }
+        }
+
 </style>
 
 <script>
@@ -34,18 +35,20 @@ function onSubmit(event){
     let name = field1.value
     let genre = field2.value
 
-    if(genre==="f" || genre==="m"){
-        if(genre === "f"){
-            result.innerHTML = `<p class="female"> Olá ${name} seja bem vinda!
-            <br>Você tem que parar de ser menininha.</p> `
-        }else{
-            result.innerHTML = `<p class="male"> Olá ${name} seja bem vindo! 
+    if(name !== ""){
+        if(genre==="f" || genre==="m"){
+            result.innerHTML = genre === "f" 
+            ? `<p class="female"> Olá ${name} seja bem vinda!
+            <br>Você tem que parar de ser menininha.</p> ` 
+            : `<p class="male"> Olá ${name} seja bem vindo! 
             <br>Onde está seu lado feminino?</p>`
+        }else{
+            result.innerHTML = `Insira um sexo válido(f ou m).`
+            return
+        }}else{
+            result.innerHTML = `Insira um nome.`
+            return
         }
-    }else{
-        result.innerHTML = `Insira um sexo válido(f ou m).`
-        return
-    }
 
 }
 form.addEventListener('submit', onSubmit)
